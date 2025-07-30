@@ -1,0 +1,34 @@
+### create a content
+POST http://localhost:8080/api/content
+Content-Type: application/json
+
+{
+  "title": "My third blog",
+  "description": "this is my third Blog",
+  "status": "IDEA",
+  "contentType": "ARTICLE",
+  "dateCreated": "2025-07-28",
+  "dateUpdated": null,
+  "url": ""
+}
+
+### get all contents
+GET http://localhost:8080/api/content
+
+### update a content
+PUT http://localhost:8080/api/content/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "title": "My first blog",
+  "description": "this is my first Blog",
+  "status": "COMPLETED",
+  "contentType": "ARTICLE",
+  "dateCreated": "2025-07-28",
+  "dateUpdated": "2025-07-29",
+  "url": ""
+}
+
+### delete a content
+DELETE http://localhost:8080/api/content/1

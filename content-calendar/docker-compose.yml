@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:16
+    container_name: local-postgres
+    environment:
+      POSTGRES_DB: content_calendar_db
+      POSTGRES_USER: calendar_admin
+      POSTGRES_PASSWORD: fdf32as6a4fe46f4
+    ports:
+      # Expose the container's port 5432 to your host machine's port 5432
+      - "5432:5432"
+    volumes:
+      # Persist database data on your host machine
+      - postgres-data:/var/lib/postgresql/data
+
+volumes:
+  postgres-data:
